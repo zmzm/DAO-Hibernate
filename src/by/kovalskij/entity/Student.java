@@ -1,11 +1,12 @@
 package by.kovalskij.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
@@ -69,4 +70,16 @@ public class Student implements Serializable {
     public void setDate(String d){
         enrolment_date = d;
     } 
+    
+    private Statistics stat;
+
+    /**
+     *
+     * @return
+     */
+    @ManyToOne
+    @JoinTable(name = "id")
+    public Statistics getStat(){
+        return stat;
+    }
 }

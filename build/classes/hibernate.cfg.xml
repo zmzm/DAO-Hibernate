@@ -7,6 +7,11 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/daotalk?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
+    
     <mapping class="by.kovalskij.entity.Student" />
+    <mapping class="by.kovalskij.entity.Statistics" />
+    <mapping class="by.kovalskij.entity.Test" />
+    
+    
   </session-factory>
 </hibernate-configuration>
